@@ -48,13 +48,13 @@
             <div class="search">
                 <div class="search-cont">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input class="search-text"  type="text">
+                    <input class="search-text" v-model="searchContact"  type="text">
                 </div>
                 
             </div>
             <!-- INIZIO CONTACTS -->
             <div class="contacts">
-                <div class="contact" v-for="(contact, index) in contacts" @click="currentIndex=index">
+                <div class="contact" v-for="(contact, index) in findContact()" @click="currentIndex=index">
                     <div class="flex-start ">
                         <div class="round-img ">
                             <img :src="contact.avatar"  alt="">

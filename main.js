@@ -173,6 +173,7 @@ createApp({
 
             currentIndex:0,
             newMessage:'',
+            searchContact:''
         }
         
     },
@@ -189,7 +190,7 @@ createApp({
                 }
                 arraymessage.push(message)
                 this.newMessage=''
-                setTimeout(this.receivedmessage, 3000);
+                setTimeout(this.receivedmessage, 1000);
 
             }
         },
@@ -201,6 +202,23 @@ createApp({
                 status: 'recived'
             }
             arraymessage.push(message)
+
+        },
+
+        findContact(){
+            if(this.searchContact){
+                return  this.contacts.filter((contact)=>{
+                    
+                    return contact.name.toLowerCase().includes(this.searchContact.toLowerCase());
+                })
+            } else{
+                return this.contacts;
+            }
+
+
+
+            
+
 
         }
             

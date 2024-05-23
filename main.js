@@ -173,12 +173,13 @@ createApp({
 
             currentIndex:0,
             newMessage:'',
-            searchContact:''
+            searchContact:'',
+            deletemessage:false
         }
         
     },
     methods:{
-        sentmessage(index){
+        sentmessage(){
             if (this.newMessage){
                 console.log(this.newMessage)
                 const arraymessage= this.contacts[this.currentIndex].messages;
@@ -214,11 +215,9 @@ createApp({
             } else{
                 return this.contacts;
             }
-
-
-
-            
-
+        },
+        deletemess(){
+            this.deletemessage = !this.deletemessage
 
         }
             

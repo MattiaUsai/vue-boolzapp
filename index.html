@@ -97,7 +97,10 @@
                     <div class=" message received " :class="message.status">
                         <p>{{message.message}}</p>
                         <div class="message-right">
-                            <i class="fa-solid fa-arrow-down"></i>
+                            <i class="fa-solid fa-arrow-down" @click="deletemess()"></i>
+                            <div class="deletemessage" v-show="deletemessage">
+                                Elimina Messaggio
+                            </div>
                             <div class="time">{{message.date}}</div>
                         </div>
                         

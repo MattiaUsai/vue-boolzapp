@@ -9,8 +9,8 @@
     <title>Boolzapp</title>
 </head>
 <body>
-
-    <div class="container">
+    <div id="app">
+        <div class="container">
         <!-- INIZIO CHATS VISIBILI SOLO SU TABLET  -->
         <div class="tablet-chats  ">
             <div class="round-img tab-chat  michele"></div>
@@ -52,91 +52,22 @@
                 </div>
                 
             </div>
+            <!-- INIZIO CONTACTS -->
             <div class="contacts">
-                <div class="contact">
+                <div class="contact" v-for="contact in contacts">
                     <div class="flex-start ">
                         <div class="round-img ">
-                            <img src="./img/avatar_1.jpg" alt="">
+                            <img :src="contact.avatar"  alt="">
                         </div>
                         <div class="profile-text">
-                            <div class="name">Michele</div>
+                            <div class="name">{{contact.name}}</div>
                             <div class="info ">ciao come stai?</div>
                         </div>
                     </div>
                     <div class="time">12:35</div>
                 </div>
-                <div class="contact">
-                    <div class="flex-start ">
-                        <div class="round-img massimo"></div>
-                        <div class="profile-text">
-                            <div class="name">Massimo</div>
-                            <div class="info ">Oggi devi uscire?</div>
-                        </div>
-                    </div>
-                    <div class="time">12:35</div>
-                </div>
-                <div class="contact">
-                    <div class="flex-start ">
-                        <div class="round-img fabio"></div>
-                        <div class="profile-text">
-                            <div class="name">fabio</div>
-                            <div class="info ">Oggi a che ora lavori</div>
-                        </div>
-                    </div>
-                    <div class="time">12:35</div>
-                </div>
-                <div class="contact">
-                    <div class="flex-start ">
-                        <div class="round-img samuele"></div>
-                        <div class="profile-text">
-                            <div class="name">Samuele</div>
-                            <div class="info ">Oggi a che ora lavori</div>
-                        </div>
-                    </div>
-                    <div class="time">12:35</div>
-                </div>
-                <div class="contacts">
-                    <div class="contact">
-                        <div class="flex-start ">
-                            <div class="round-img giuditta"></div>
-                            <div class="profile-text">
-                                <div class="name">Giuditta</div>
-                                <div class="info ">ciao come stai?</div>
-                            </div>
-                        </div>
-                        <div class="time">12:35</div>
-                    </div>
-                    <div class="contact">
-                        <div class="flex-start ">
-                            <div class="round-img martina"></div>
-                            <div class="profile-text">
-                                <div class="name">Martina</div>
-                                <div class="info ">Oggi devi uscire?</div>
-                            </div>
-                        </div>
-                        <div class="time">12:35</div>
-                    </div>
-                    <div class="contact">
-                        <div class="flex-start ">
-                            <div class="round-img alessandro"></div>
-                            <div class="profile-text">
-                                <div class="name">Alessandro</div>
-                                <div class="info ">Oggi a che ora lavori</div>
-                            </div>
-                        </div>
-                        <div class="time">12:35</div>
-                    </div>
-                    <div class="contact">
-                        <div class="flex-start ">
-                            <div class="round-img federico"></div>
-                            <div class="profile-text">
-                                <div class="name"> Federico</div>
-                                <div class="info ">Oggi a che ora lavori</div>
-                            </div>
-                        </div>
-                        <div class="time">12:35</div>
-                    </div>
-                </div>
+                
+                
             </div>
         </div>
         <div class="chat-area">
@@ -158,19 +89,11 @@
 
             <!-- INIZIO MESSAGE SECTION DOVE SI VISUALIZZANO MESSAGGI INVIATI E RICEVUTI -->
             <div class="message-section">
-                <div class="flex-end">
-                    <div class=" message sent">
-                        <p class="message-sent">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates nulla eius voluptate ratione sit iusto consequatur, enim, cupiditate earum dolores fugit alias cum rem illum. Cupiditate quod repellendus consectetur velit!</p>
-                        <div class="message-right">
-                            <i class="fa-solid fa-arrow-down"></i>
-                            <div class="time">13:45</div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="flex-start">
+              
+                
+                <div class="flex"  >
                     <div class=" message received ">
-                        <p class="message-received">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut cum ducimus, eveniet illum quae rem fugiat dignissimos quos reprehenderit iure corrupti necessitatibus deserunt facere aperiam. Amet quae totam possimus!</p>
+                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut cum ducimus, eveniet illum quae rem fugiat dignissimos quos reprehenderit iure corrupti necessitatibus deserunt facere aperiam. Amet quae totam possimus!</p>
                         <div class="message-right">
                             <i class="fa-solid fa-arrow-down"></i>
                             <div class="time">13:45</div>
@@ -178,29 +101,9 @@
                         
                     </div>
                 </div>
-                <div class="flex-end">
+                <div class="flex">
                     <div class=" message sent">
-                        <p class="message-sent">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates nulla eius voluptate ratione sit iusto consequatur, enim, cupiditate earum dolores fugit alias cum rem illum. Cupiditate quod repellendus consectetur velit!</p>
-                        <div class="message-right">
-                            <i class="fa-solid fa-arrow-down"></i>
-                            <div class="time">13:45</div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="flex-start">
-                    <div class=" message received ">
-                        <p class="message-received">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut cum ducimus, eveniet illum quae rem fugiat dignissimos quos reprehenderit iure corrupti necessitatibus deserunt facere aperiam. Amet quae totam possimus!</p>
-                        <div class="message-right">
-                            <i class="fa-solid fa-arrow-down"></i>
-                            <div class="time">13:45</div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="flex-end">
-                    <div class=" message sent">
-                        <p class="message-sent">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates nulla eius voluptate ratione sit iusto consequatur, enim, cupiditate earum dolores fugit alias cum rem illum. Cupiditate quod repellendus consectetur velit!</p>
+                        <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates nulla eius voluptate ratione sit iusto consequatur, enim, cupiditate earum dolores fugit alias cum rem illum. Cupiditate quod repellendus consectetur velit!</p>
                         <div class="message-right">
                             <i class="fa-solid fa-arrow-down"></i>
                             <div class="time">13:45</div>
@@ -220,7 +123,13 @@
                 <div class="emoji"><i class="fa-solid fa-microphone"></i></div>
             </div>
         </div>
+        </div>
     </div>
+    
+    <!-- LINK VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- LINK JS -->
+    <script src="./main.js"></script>
     
 </body>
 </html>

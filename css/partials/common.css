@@ -1,9 +1,11 @@
-body{
-    display: flex;
+#app{
     height: 100vh;
+    width: 100vw;
+    display: flex;
     background: -webkit-linear-gradient(90deg, lightgray 80%, green 20%);
    
 }
+
 
 
 /* CLASSI DI LAYOUT */
@@ -44,8 +46,8 @@ body{
 .container{
     margin: auto;
     background-color: #fff;
-    height: 90vh;
-    width: 90vw;
+    height: 90%;
+    width: 90%;
     display: flex;
 }
 /* DOVE SI VEDONO LE CHATS IN ORDINE  */
@@ -195,10 +197,15 @@ body{
     border-radius: 10px;
     display: flex;
 }
+.message-section .flex{
+    display: inline-grid;
+}
 .received {
+    justify-self: flex-start;
     background-color: var(--ms-received);
 }
 .sent {
+    justify-self: flex-end;
     background-color: var(--ms-sent);
 }
 .message-section p{

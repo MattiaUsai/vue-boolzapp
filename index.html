@@ -98,7 +98,7 @@
                         <p>{{message.message}}</p>
                         <div class="message-right">
                             <i class="fa-solid fa-arrow-down"></i>
-                            <div class="time">13:45</div>
+                            <div class="time">{{message.date}}</div>
                         </div>
                         
                     </div>
@@ -112,7 +112,7 @@
             <div class="write-section">
                 <div class="emoji"><i class="fa-solid fa-face-smile"></i></div>
                 
-                <input  type="text" placeholder="Scrivi un messaggio">
+                <input  type="text" v-model="newMessage" @keyup.enter="sentmessage" placeholder="Scrivi un messaggio">
                 <div class="emoji"><i class="fa-solid fa-microphone"></i></div>
             </div>
         </div>

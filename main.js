@@ -170,9 +170,40 @@ createApp({
                     ],
                 }
             ],
-            
-            currentIndex:2
+
+            currentIndex:0,
+            newMessage:'',
         }
+        
     },
+    methods:{
+        sentmessage(index){
+            if (this.newMessage){
+                console.log(this.newMessage)
+                const arraymessage= this.contacts[this.currentIndex].messages;
+            
+                const message ={
+                    date: '20/03/2020 16:30:00',
+                    message: this.newMessage,
+                    status: 'sent'
+                }
+                arraymessage.push(message)
+                this.newMessage=''
+                setTimeout(this.receivedmessage, 3000);
+
+            }
+        },
+        receivedmessage(){
+            const arraymessage= this.contacts[this.currentIndex].messages;
+            const message ={
+                date: '20/03/2020 16:30:00',
+                message: 'OK',
+                status: 'recived'
+            }
+            arraymessage.push(message)
+
+        }
+            
+    }
 
 }).mount('#app')

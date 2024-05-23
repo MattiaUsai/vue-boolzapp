@@ -1,0 +1,39 @@
+:root{
+    --icons-color:lightgray;
+    --bar-color:#F3EEEB;
+    --info-color:gray;
+    --name-color:black;
+    --contact-color:white;
+    --ms-sent:violet;
+    --ms-received:purple;
+    --alerts:lightblue;
+    
+}
+/* IMMAGGINI PROFILO  */
+.michele{
+    background-image: url(/img/avatar_1.jpg);
+}
+.massimo{
+    background-image: url(/img/avatar_2.jpg);
+}
+.fabio{
+    background-image: url(/img/avatar_3.jpg);
+}
+.samuele{
+    background-image: url(/img/avatar_4.jpg);
+}
+.giuditta{
+    background-image: url(/img/avatar_6.jpg);
+}
+.martina{
+    background-image: url(/img/avatar_8.jpg);
+}
+.alessandro{
+    background-image: url(/img/avatar_5.jpg);
+}
+.federico{
+    background-image: url(/img/avatar_7.jpg);
+}
+.io{
+    background-image: url(/img/avatar_io.jpg);
+}

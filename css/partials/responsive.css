@@ -1,0 +1,57 @@
+
+
+/* CLASSI PER RESPONSIVE */
+.tablet{
+    display: none;
+}
+.desktop{
+    display: none;
+}
+.tablet-chats{
+    width: 10%;
+    
+    display: none;
+}
+.tab-chat{
+    margin: 20px 0px;
+}
+
+
+
+
+@media  screen and (min-width: 480px){
+    .write-section .emoji{
+        display: flex;
+        width: 15%;
+        
+    }
+    .tablet{
+        display: flex;
+    }
+    .tablet-chats{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media  screen and (min-width: 768px) {
+    .chats{
+        display: block;
+    }
+    .write-section .emoji{
+        display: flex;
+        width: 15%;
+    }
+    .desktop{
+        display: flex;
+    }
+    .tablet-chats{
+        
+        display: none;
+    }
+
+}
+

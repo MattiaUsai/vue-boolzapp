@@ -54,7 +54,7 @@
             </div>
             <!-- INIZIO CONTACTS -->
             <div class="contacts">
-                <div class="contact" v-for="contact in contacts">
+                <div class="contact" v-for="(contact, index) in contacts" @click="currentIndex=index">
                     <div class="flex-start ">
                         <div class="round-img ">
                             <img :src="contact.avatar"  alt="">
@@ -70,13 +70,15 @@
                 
             </div>
         </div>
-        <div class="chat-area">
+        <div class="chat-area" v-for="(contact, index) in contacts" v-show="currentIndex===index">
             <!-- INIZIO PROFILO CHAT  -->
             <div class="profile-section">
                 <div class="flex-start wh-50 ">
-                    <div class="round-img michele"></div>
+                    <div class="round-img ">
+                        <img :src="contact.avatar"  alt="">
+                    </div>
                     <div class="profile-text">
-                        <div class="name">Michele</div>
+                        <div class="name">{{contact.name}}</div>
                         <div class="info ">Ultimo Acesso oggi alle 16:26</div>
                     </div>
                 </div>
@@ -91,9 +93,9 @@
             <div class="message-section">
               
                 
-                <div class="flex"  >
-                    <div class=" message received ">
-                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut cum ducimus, eveniet illum quae rem fugiat dignissimos quos reprehenderit iure corrupti necessitatibus deserunt facere aperiam. Amet quae totam possimus!</p>
+                <div class="flex" v-for="message in contact.messages" >
+                    <div class=" message received " :class="message.status">
+                        <p>{{message.message}}</p>
                         <div class="message-right">
                             <i class="fa-solid fa-arrow-down"></i>
                             <div class="time">13:45</div>
@@ -101,16 +103,7 @@
                         
                     </div>
                 </div>
-                <div class="flex">
-                    <div class=" message sent">
-                        <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates nulla eius voluptate ratione sit iusto consequatur, enim, cupiditate earum dolores fugit alias cum rem illum. Cupiditate quod repellendus consectetur velit!</p>
-                        <div class="message-right">
-                            <i class="fa-solid fa-arrow-down"></i>
-                            <div class="time">13:45</div>
-                        </div>
-                        
-                    </div>
-                </div>
+                
 
                
             </div>

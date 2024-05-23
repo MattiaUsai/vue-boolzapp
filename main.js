@@ -169,7 +169,9 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+            
+            currentIndex:2
         }
     },
 
